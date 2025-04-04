@@ -1,4 +1,4 @@
-drop database db_faculdade_sul_e_ar;
+
 create database db_faculdade_sul_e_ar;
 use db_faculdade_sul_e_ar;
 
@@ -10,7 +10,6 @@ create table tbl_professores (
     data_nascimento date not null,
     cpf varchar(14) not null,
     rg varchar(14) not null,
-    conselho_regional varchar(25) not null,
     email varchar(255) not null
 );
 create table tbl_endereco_professores (
@@ -156,9 +155,3 @@ create table tbl_notas (
     constraint fk_nota_disciplina foreign key (id_disciplinas) references tbl_disciplinas(id),
     constraint fk_nota_situacao foreign key (id_situacao_notas) references tbl_situacao_notas(id)
 );
-
-
-
-
-
-
